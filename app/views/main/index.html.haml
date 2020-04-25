@@ -1,4 +1,7 @@
 .header
+  .headercontents1 成果物
+  .headercontents2 スキル
+  .headercontents3 プロフィール
 
 
 .toppage
@@ -6,49 +9,68 @@
 
 .product
   成果物
+  %body
+  .cp_modal02
+    %input#cp_modal{:type => "checkbox"}/
+    %h1#productname chat-space
+    %p#productname チャットできるWebサービス
+    %label.cp_modal_btn{:for => "cp_modal"}
+    %label.cp_modal_bg{:for => "cp_modal"}
+    .cp_modal_cont
+      %label.cp_close{:for => "cp_modal"}
+        %i.fa.fa-times{"aria-hidden" => "true"}
+      %header
+        %h2 機能の説明
+      %article.cp_content
+        %p ユーザー新規登録、ログイン機能
+        %p グループ作成機能：既存ユーザーをインクリメンタルサーチが可能
+        %p チャット機能：非同期通信によるチャット
+      %footer
+        %label.cp_btn.cp_cl{:for => "cp_modal"} 閉じる
+
+
 
 .skill
   スキル
-.cp_cssslider
-  %input#photo1{:checked => "checked", :name => "cp_switch", :type => "radio"}/
-  %label{:for => "photo1"}
-    %img{src: "/assets/136341.png"}/
-  %img{:src => "/assets/136341.png"}/
-  %input#photo2{:name => "cp_switch", :type => "radio"}/
-  %label{:for => "photo2"}
+  .cp_cssslider
+    %input#photo1{:checked => "checked", :name => "cp_switch", :type => "radio"}/
+    %label{:for => "photo1"}
+      %img{src: "/assets/136341.png"}/
+    %img{:src => "/assets/136341.png"}/
+    %input#photo2{:name => "cp_switch", :type => "radio"}/
+    %label{:for => "photo2"}
+      %img{:src => "/assets/20150804010349-min.png"}/
     %img{:src => "/assets/20150804010349-min.png"}/
-  %img{:src => "/assets/20150804010349-min.png"}/
-  %input#photo3{:name => "cp_switch", :type => "radio"}/
-  %label{:for => "photo3"}
+    %input#photo3{:name => "cp_switch", :type => "radio"}/
+    %label{:for => "photo3"}
+      %img{:src => "/assets/Iruby (2).png"}/
     %img{:src => "/assets/Iruby (2).png"}/
-  %img{:src => "/assets/Iruby (2).png"}/
-  %input#photo4{:name => "cp_switch", :type => "radio"}/
-  %label{:for => "photo4"}
+    %input#photo4{:name => "cp_switch", :type => "radio"}/
+    %label{:for => "photo4"}
+      %img{:src => "/assets/rails_logo (1).png"}/
     %img{:src => "/assets/rails_logo (1).png"}/
-  %img{:src => "/assets/rails_logo (1).png"}/
-  %input#photo5{:name => "cp_switch", :type => "radio"}/
-  %label{:for => "photo5"}
+    %input#photo5{:name => "cp_switch", :type => "radio"}/
+    %label{:for => "photo5"}
+      %img{:src => "/assets/20180406164029-min.png"}/
     %img{:src => "/assets/20180406164029-min.png"}/
-  %img{:src => "/assets/20180406164029-min.png"}/
-  %input#photo6{:name => "cp_switch", :type => "radio"}/
-  %label{:for => "photo6"}
+    %input#photo6{:name => "cp_switch", :type => "radio"}/
+    %label{:for => "photo6"}
+      %img{:src => "/assets/jquery.png"}/
     %img{:src => "/assets/jquery.png"}/
-  %img{:src => "/assets/jquery.png"}/
+    
 .prof
   プロフィール
-  
-
-%form
-  .item
-    %label.label お名前
-    %input.inputs{:name => "name", :type => "text"}/
-  .item
-    %label.label メールアドレス
-    %input.inputs{:name => "email", :type => "email"}/
-  .item
-    %label.label ご意見
-    %textarea.inputs
-  .btn-area
-    %input{:type => "submit", :value => "送信"}/
-    %input{:type => "reset", :value => "リセット"}/
+  %form
+    .item
+      %label.label お名前
+      %input.inputs{:name => "name", :type => "text"}/
+    .item
+      %label.label メールアドレス
+      %input.inputs{:name => "email", :type => "email"}/
+    .item
+      %label.label ご意見
+      %textarea.inputs
+    .btn-area
+      %input{:type => "submit", :value => "送信"}/
+      %input{:type => "reset", :value => "リセット"}/
 
