@@ -1,19 +1,26 @@
 .header
-  .headercontents1 成果物
-  .headercontents2 スキル
-  .headercontents3 プロフィール
+  .headercontents1
+  = link_to "成果物", { anchor: "1" }
+  .headercontents2 
+  = link_to "スキル", { anchor: "2" }
+  .headercontents3
+  = link_to "プロフィール", { anchor: "3" }
+  .headercontents3
+  = link_to "お問い合わせ", { anchor: "4" }
+
 
 
 .toppage
 
 
-.product
-  成果物
+#1.product
+  %img{src: "/assets/成果物222-min.png"}/
   %body
   .cp_modal02
     %input#cp_modal{:type => "checkbox"}/
-    %h1#productname chat-space
-    %p#productname チャットできるWebサービス
+    %h1#productname
+    %a#productname{:href => "http://3.114.197.139//", :target => "_blank"} Chat-Space
+    %p#productdetail チャットできるWebサービス
     %label.cp_modal_btn{:for => "cp_modal"}
     %label.cp_modal_bg{:for => "cp_modal"}
     .cp_modal_cont
@@ -30,8 +37,8 @@
 
 
 
-.skill
-  スキル
+#2.skill
+  %img{src: "/assets/成果物 (1)-min.png"}/
   .cp_cssslider
     %input#photo1{:checked => "checked", :name => "cp_switch", :type => "radio"}/
     %label{:for => "photo1"}
@@ -57,20 +64,31 @@
     %label{:for => "photo6"}
       %img{:src => "/assets/jquery.png"}/
     %img{:src => "/assets/jquery.png"}/
-    
-.prof
-  プロフィール
-  %form
-    .item
-      %label.label お名前
-      %input.inputs{:name => "name", :type => "text"}/
-    .item
-      %label.label メールアドレス
-      %input.inputs{:name => "email", :type => "email"}/
-    .item
-      %label.label ご意見
-      %textarea.inputs
-    .btn-area
-      %input{:type => "submit", :value => "送信"}/
-      %input{:type => "reset", :value => "リセット"}/
+
+#3.prof
+  %img{:src => "/assets/成果物 (1).png"}/
+  %figure.cp_caption
+    %img{:src => "/assets/IMG_0090-min.png"}/
+    %figcaption
+      %h3 こんにちは
+      %h3 片桐誠幸
+      %h3 と申します。
+  %p プログラミングスクール「TECH::EXPERT」に在籍し、RubyやRuby on Railsを使った開発も経験してきました。
+  %p 現在はweb制作をメインにフリーランスとして活動しています。
+  %P 個人アプリを開発しながら日々努力し、技術を積み上げておりますのでよろしくお願いしたします。
+  
+%form#4
+  お問い合わせ
+  .item
+    %label.label お名前
+    %input.inputs{:name => "name", :type => "text"}/
+  .item
+    %label.label メールアドレス
+    %input.inputs{:name => "email", :type => "email"}/
+  .item
+    %label.label お問い合わせ内容
+    %textarea.inputs
+  .btn-area
+    %input{:type => "submit", :value => "送信"}/
+    %input{:type => "reset", :value => "リセット"}/
 
