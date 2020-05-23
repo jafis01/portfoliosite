@@ -8,10 +8,7 @@
   .headercontents3
   = link_to "お問い合わせ", { anchor: "4" }
 
-
-
 .toppage
-
 
 #1.product
   %img{src: "/assets/成果物222-min.png"}/
@@ -73,22 +70,11 @@
       %h3 こんにちは
       %h3 片桐誠幸
       %h3 と申します。
-  %p プログラミングスクール「TECH::EXPERT」に在籍し、RubyやRuby on Railsを使った開発も経験してきました。
-  %p 現在はweb制作をメインにフリーランスとして活動しています。
-  %P 個人アプリを開発しながら日々努力し、技術を積み上げておりますのでよろしくお願いしたします。
-  
-%form#4
-  お問い合わせ
-  .item
-    %label.label お名前
-    %input.inputs{:name => "name", :type => "text"}/
-  .item
-    %label.label メールアドレス
-    %input.inputs{:name => "email", :type => "email"}/
-  .item
-    %label.label お問い合わせ内容
-    %textarea.inputs
-  .btn-area
-    %input{:type => "submit", :value => "送信"}/
-    %input{:type => "reset", :value => "リセット"}/
+  .sente
+    %p プログラミングスクール「TECH::EXPERT」に在籍し、RubyやRuby on Railsを使った開発を経験
+    %p 現在はweb制作をメインにフリーランスとして活動中。
+    %P 個人アプリを開発しながら日々努力し、技術を積み上げておりますのでよろしくお願い致します。
 
+.form お問い合わせは、ツイッターダイレクトメールでお願いいたします。
+.formimage
+  = link_to(image_tag('/assets/スクリーンショット 2020-05-23 9.12.57.png', border: 0),"https://twitter.com/KatagiriRails", popup: true)
